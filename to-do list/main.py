@@ -1,6 +1,4 @@
 tasks = []
-
-
 while True :
     print ("What would you like to do?\n")
     print('1. Add task \n')
