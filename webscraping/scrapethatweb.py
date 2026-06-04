@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
+
 booklist = []
 if os.path.exists("books.json"):
     with open("books.json", "r") as f:

@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1> Three star books <br></h1>
+    {% for book in books %}
+    <p>{{book['title']}} - {{book['price']}}  </p>
+    {% endfor %}
+</body>
+</html>
