@@ -12,9 +12,22 @@
         <input type ="text" name = "title" placeholder = "Enter task here.....">
         <button type = "submit">ADD</button>
     </form>
-
+    
     {% for task in tasks %}
-        <p>{{task.title}} - <a href = "/delete/{{task.id}}"> Delete</a></p>
+    <ul>
+    <p><li>
+        {% if task.done %}
+           <s> {{task.title}}</s> 
+        {% else %}
+            {{task.title}}
+        {% endif %}
+    
+        <a href = "/done/{{task.id}}" style =" margin : 0px 10px 0px 10px"> Done </a> 
+        <a href = "/delete/{{task.id}}"> Delete</a>
+    </p> </li></ul>   
     {% endfor %}
+
+    
+
 </body>
 </html>

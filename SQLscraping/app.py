@@ -33,4 +33,12 @@ def delete(id):
     db.session.commit()
     return redirect("/")
 
+@app.route("/done/<int:id>")
+def done(id):
+    task = Task.query.get(id)
+    task.done = True
+    db.session.commit()
+    return redirect("/")
+
+
 app.run(debug = True)
